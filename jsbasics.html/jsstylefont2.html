@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>First js code</title>
+        <style>
+            .parent-container {
+             display:flex;
+             justify-content:space-between;
+             border: 2px solid blue;
+             padding:12;
+             width:97%;
+             height:45%;
+            }
+            .container {
+               
+              text-align: left;
+              padding: 10px;
+             /* font-size: large;*/
+            }
+          
+            #button {
+               height: auto;
+               width: auto;
+            }
+        </style>
+
+    </head>
+    <div class="parent-container">
+    <div class="container">
+    <h2>My first java code</h2>
+    <p id="Demo1">click the button to maximize this font!</p>
+<button id="button1" type="button" onclick='document.getElementById("Demo1").style.fontSize="30px"'>CLICK HERE</button>
+
+    </div>
+
+
+    <div class="container">
+<h2>My first java code</h2>
+<p id="Demo2">click on the button below to remove this text!</p>
+<button id="button2" type="button" onclick='document.getElementById("Demo2").style.display="none"'>CLICK HERE</button>
+   </div>
+</div>
+
+    </html>

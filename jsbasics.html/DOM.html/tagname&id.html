@@ -1,0 +1,19 @@
+<html>
+<head><title>using tagname</title></head>
+<body>
+    <h1>Welcome to JS code 1</h1>
+<!--element[0] refers to this para tag-->
+    <p>Today we will learn about using tag name to find an element.</p>
+<!--element[1] refers to this para tag--> 
+    <p>are you ready to experience the change.</p>
+<!--element[2] refers to this para tag-->
+    <p>lets do some work.</p>
+<!--the change will occur inside this tag-->
+    <p id="kid">Change will occur here!</p>
+</body>
+
+<script>
+    const element=document.getElementsByTagName("p");  /*Remember using (Elements) instead of only (Element) except when finding elements by "id"*/
+    document.getElementById("kid").innerHTML=element[0].innerHTML; /*element[0] (0,1,2,3,... indicates 1st 2nd 3rd <p> tags respectively)*/
+</script>
+</html>

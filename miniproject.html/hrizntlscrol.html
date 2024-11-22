@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage Replica</title>
+    <style>
+        /* General styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: lightblue;
+            color: white;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #121212;
+        }
+        #yoyo{
+            border-radius: 10cm;
+        }
+        .header h1 {
+            font-size: 30px;
+        }
+
+        /* Content Section */
+        .content {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .content h2 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        .content p {
+            font-size: 14px;
+            color: #aaaaaa;
+        }
+
+        /* Image Slider */
+        .slider-container {
+            position: relative;
+        }
+
+        .slider {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            gap: 10px;
+            padding: 10px;
+            margin: 20px 0;
+        }
+
+        .slider::-webkit-scrollbar {
+            display: none; /* Hide scrollbar for horizontal scrolling */
+        }
+
+        .slide {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        .slide img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        /* Navigation Buttons */
+        .navigation-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.3);
+            border: none;
+            color: white;
+            font-size: 20px;
+            height: 40px;
+            width: 40px;
+            cursor: pointer;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .navigation-button:hover {
+            background-color: rgba(255, 255, 255, 0.6);
+        }
+
+        .navigation-button.left {
+            left: 10px;
+        }
+
+        .navigation-button.right {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+    <!-- Header -->
+    <div class="header">
+        <h1>h!anime</h1>
+        <nav>
+            <button id="yoyo">~</button>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h2>Why Does Nobody Remember Me in This World?</h2>
+        <p>In a time when the great war between five rival races for supremacy on Earth ended with humanity's victory...</p>
+    </div>
+
+    <!-- Slider Section -->
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide">
+                <img src="file:///C:/Users/centu/OneDrive/Desktop/Screenshot%202024-11-17%20203209.png" alt="Slide 1">
+            </div>
+            <div class="slide">
+                <img src="file:///C:/Users/centu/OneDrive/Desktop/Screenshot%202024-11-17%20203325.png" alt="Slide 2">
+            </div>
+            <div class="slide">
+                <img src="file:///C:/Users/centu/OneDrive/Desktop/Screenshot%202024-11-17%20203344.png" alt="Slide 3">
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <button class="navigation-button left" onclick="scrollLeft()">&#8249;</button>
+        <button class="navigation-button right" onclick="scrollRight()">&#8250;</button>
+    </div>
+    </section>
+<!--<hr>
+    <section>
+        <h2>Why Does Nobody Remember Me in This World?</h2>
+        <p>In a time when the great war between five rival races for supremacy on Earth ended with humanity's victory...</p>
+    </section>   -->
+
+    <!-- JavaScript -->
+    <script>
+        const slider = document.querySelector('.slider');
+
+        function scrollRight() {
+            slider.scrollBy({ left: window.innerWidth, behavior: 'smooth' });
+        }
+
+        function scrollLeft() {
+            slider.scrollBy({ left: -window.innerWidth, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+<!--   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage Replica</title>
+    <style>
+        /* General styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #2a2a2a;
+            color: white;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #121212;
+        }
+
+        .header h1 {
+            font-size: 18px;
+        }
+
+        /* Content Section */
+        .content {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .content h2 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        .content p {
+            font-size: 14px;
+            color: #aaaaaa;
+        }
+
+        /* Image Slider */
+        .slider {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            gap: 10px;
+            padding: 10px;
+            margin: 20px 0;
+        }
+
+        .slider::-webkit-scrollbar {
+            display: none; /* Hide scrollbar for horizontal scrolling */
+        }
+
+        .slide {
+            flex: 0 0 100%;
+            max-width: 100%;
+            position: relative;
+        }
+
+        .slide img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        /* Navigation Buttons */
+        .navigation {
+            position: absolute;
+            top: 50%;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            pointer-events: none;
+        }
+
+        .navigation button {
+            pointer-events: all;
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            font-size: 24px;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            transition: 0.3s;
+        }
+
+        .navigation button:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="header">
+        <h1>h!anime</h1>
+        <nav>
+            <button>Join Now</button>
+        </nav>
+    </div>
+
+   
+    <div class="content">
+        <h2>Why Does Nobody Remember Me in This World?</h2>
+        <p>In a time when the great war between five rival races for supremacy on Earth ended with humanity's victory...</p>
+    </div>
+
+    
+    <div class="slider">
+        <div class="slide">
+            <img src="https://via.placeholder.com/1024x500/1" alt="Slide 1">
+        </div>
+        <div class="slide">
+            <img src="https://via.placeholder.com/1024x500/2" alt="Slide 2">
+        </div>
+        <div class="slide">
+            <img src="https://via.placeholder.com/1024x500/3" alt="Slide 3">
+        </div>
+    </div>
+
+    
+    <div class="navigation">
+        <button id="prev" onclick="scrollLeft()">&#8592;</button>
+        <button id="next" onclick="scrollRight()">&#8594;</button>
+    </div>
+
+    
+    <script>
+        const slider = document.querySelector('.slider');
+
+        function scrollRight() {
+            slider.scrollBy({ left: window.innerWidth, behavior: 'smooth' });
+        }
+
+        function scrollLeft() {
+            slider.scrollBy({ left: -window.innerWidth, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>  -->
